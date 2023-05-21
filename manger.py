@@ -512,13 +512,13 @@ def load_data():
 def check_for_errors():
     has_errors = False
     if not ntpath.exists(factorio_appdata_folder):
-        print_error(FileExistsError(f"factorio data folder does not exist: '{factorio_appdata_folder}'"))
+        print_error(FileExistsError(f"factorio data folder does not exist: '{factorio_appdata_folder}'\n    edit the config file and set factorio data folder"))
         has_errors = True
     elif not ntpath.isdir(factorio_appdata_folder):
-        print_error(FileExistsError(f"factorio data folder is not a directory: '{factorio_appdata_folder}'"))
+        print_error(FileExistsError(f"factorio data folder is not a directory: '{factorio_appdata_folder}'\n    edit the config file and set factorio data folder"))
         has_errors = True
     if factorio_version is None:
-        print_error(FileExistsError(f"invalid factorio version: '{factorio_version}'"))
+        print_error(FileExistsError(f"invalid factorio version: '{factorio_version}'\n    edit the config and set the version to a valid list (e.g. [1, 1, 0])"))
         has_errors = True
     
     if has_errors:
