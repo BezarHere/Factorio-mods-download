@@ -45,6 +45,7 @@ _mod_request_rand_value = '021789155387211379'
 
 __folder__ = gtil.parent_path(__file__)
 def to_local_path(p: str) -> str:
+    return p
     return ntpath.join(__folder__, p)
 
 config_path = to_local_path('config.json')
